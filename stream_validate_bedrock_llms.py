@@ -33,12 +33,23 @@ model_kwargs = {
     "top_k": 1,
 }
 
+#BEDROCK CHAT
+#anthropic.claude-3-sonnet-20240229-v1:0
+#anthropic.claude-3-5-sonnet-20240620-v1:0" 
+#anthropic.claude-3-5-sonnet-20241022-v2:0
+#anthropic.claude-3-5-haiku-20241022-v1:0
+
 llm_bedrock = BedrockChat(
     client=client,
     model_id=model_id,
     model_kwargs=model_kwargs,
     streaming=True
 )
+
+#BEDROCK
+#anthropic.claude-instant-v1
+#anthropic.claude-v2
+#amazon.titan-text-lite-v1
 
 template = '''
     {question}
